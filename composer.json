@@ -1,0 +1,12 @@
+{
+    
+    "require": {
+        "guzzlehttp/guzzle": "~7.0"
+    },
+    "autoload": {
+        "classmap": ["Model/"],
+        "files": [ "config.php" ]
+    },
+    "name": "weather_app/api",
+    "description": ""
+}

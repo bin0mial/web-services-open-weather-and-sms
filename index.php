@@ -1,6 +1,11 @@
 <?php
+
+use \APIFetcher\weather\WeatherGuzzle;
+use \APIFetcher\sms\SMS;
+
 require("./vendor/autoload.php");
 ini_set('memory_limit', '-1');
+
 $weather = new WeatherGuzzle();
 $egyptian_cities = $weather->get_cities();
 if (isset($_POST["submit"]) && isset($_POST["city"])) {

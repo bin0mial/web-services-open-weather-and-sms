@@ -1,10 +1,12 @@
 {
-    
+
     "require": {
         "guzzlehttp/guzzle": "~7.0"
     },
     "autoload": {
-        "classmap": ["Model/"],
+        "psr-4":{
+            "APIFetcher\\": "Model"
+        },
         "files": [ "config.php" ]
     },
     "name": "weather_app/api",

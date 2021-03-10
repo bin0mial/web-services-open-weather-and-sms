@@ -1,4 +1,9 @@
 <?php
+
+namespace APIFetcher\sms;
+
+use \Exception;
+
 class SMS implements SMS_Interface{
 
     private $text_local;

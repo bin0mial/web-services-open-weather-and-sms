@@ -1,6 +1,8 @@
 <?php
 
-use GuzzleHttp\Client;
+namespace APIFetcher\weather;
+
+use \GuzzleHttp\Client;
 
 class WeatherGuzzle extends Weather_Provider
 {
@@ -18,7 +20,7 @@ class WeatherGuzzle extends Weather_Provider
             $response = $client->get($url);
             return json_decode($response->getBody(), true);
         }
-        catch (Exception $e){
+        catch (\Exception $e){
             echo $e->getMessage();
             return false;
         }

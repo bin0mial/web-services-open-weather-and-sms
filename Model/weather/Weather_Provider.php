@@ -1,5 +1,6 @@
 <?php
 
+namespace APIFetcher\weather;
 
 abstract class Weather_Provider implements  Weather_Interface
 {
@@ -36,9 +37,9 @@ abstract class Weather_Provider implements  Weather_Interface
         $full_datetime = [];
 
         $unix_time = time();
-        $tz = new DateTimeZone("Africa/Cairo");
+        $tz = new \DateTimeZone("Africa/Cairo");
 
-        $time = new DateTime();
+        $time = new \DateTime();
         $time->setTimestamp($unix_time)->setTimezone($tz);
 
         $full_datetime["day_hour"] = $time->format("l g:i a");

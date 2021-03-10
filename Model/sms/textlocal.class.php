@@ -1,5 +1,9 @@
 <?php
 
+namespace APIFetcher\sms;
+
+use \Exception;
+
 /**
  * Textlocal API2 Wrapper Class
  *

@@ -1,5 +1,7 @@
 <?php
 
+namespace APIFetcher\weather;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -35,7 +37,7 @@ class Weather extends Weather_Provider {
 
             return json_decode($result, true);
         }
-        catch (Exception $e){
+        catch (\Exception $e){
             echo $e->getMessage();
             return false;
         }
